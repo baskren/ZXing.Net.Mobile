@@ -1,6 +1,6 @@
 ﻿<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0;Xamarin.iOS10;Xamarin.Mac20;MonoAndroid90;MonoAndroid10.0;tizen40</TargetFrameworks>
+		<TargetFrameworks>netstandard2.0;Xamarin.iOS10;Xamarin.Mac20;MonoAndroid10.0;tizen40</TargetFrameworks>
 		<TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">$(TargetFrameworks);uap10.0.16299;</TargetFrameworks>
 		<AssemblyName>ZXing.Net.Mobile.Forms</AssemblyName>
 		<RootNamespace>ZXing.Net.Mobile.Forms</RootNamespace>
@@ -76,7 +76,7 @@
 	</ItemGroup>
 	<!-- NOTE: When Android 11.x comes out we neeed to make this check more robust -->
 	<ItemGroup Condition="'$(TargetFramework)' == 'MonoAndroid10.0'">
-		<PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.1.0.1" />
+		<PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.2.0.5" />
 	</ItemGroup>
 	<ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
 		<Compile Include="**\*.ios.cs" />
@@ -95,8 +95,8 @@
 		<Compile Include="**\*.tizen.*.cs" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
-		<PackageReference Include="Xamarin.Forms" Version="4.8.0.1687" />
+		<PackageReference Include="Xamarin.Essentials" Version="1.6.0" />
+		<PackageReference Include="Xamarin.Forms" Version="5.0.0.1874" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\ZXing.Net.Mobile\ZXing.Net.Mobile.csproj" />
