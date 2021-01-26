@@ -76,7 +76,7 @@
 	</ItemGroup>
 	<!-- NOTE: When Android 11.x comes out we neeed to make this check more robust -->
 	<ItemGroup Condition="'$(TargetFramework)' == 'MonoAndroid10.0'">
-		<PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.2.0.5" />
+		<PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.2.0.6" />
 	</ItemGroup>
 	<ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
 		<Compile Include="**\*.ios.cs" />
@@ -95,7 +95,7 @@
 		<Compile Include="**\*.tizen.*.cs" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Xamarin.Essentials" Version="1.6.0" />
+		<PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
 		<PackageReference Include="Xamarin.Forms" Version="5.0.0.1874" />
 	</ItemGroup>
 	<ItemGroup>
