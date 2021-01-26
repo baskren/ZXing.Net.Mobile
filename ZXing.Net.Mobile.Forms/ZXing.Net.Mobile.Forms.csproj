@@ -71,6 +71,14 @@
 		<AndroidResource Include="Resources\xml\*.xml" />
 		<PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.2.0.6" />
 	</ItemGroup>
+	<!-- NOTE: When Android 11.x comes out we neeed to make this check more robust -->
+	<ItemGroup Condition="$(TargetFramework.StartsWith('MonoAndroid')) And '$(TargetFramework)' != 'MonoAndroid10.0'">
+		<PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.3" />
+	</ItemGroup>
+	<!-- NOTE: When Android 11.x comes out we neeed to make this check more robust -->
+	<ItemGroup Condition="'$(TargetFramework)' == 'MonoAndroid10.0'">
+		<PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.2.0.5" />
+	</ItemGroup>
 	<ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
 		<Compile Include="**\*.ios.cs" />
 		<Compile Include="**\*.ios.*.cs" />
@@ -83,6 +91,7 @@
 	</ItemGroup>
 	<ItemGroup Condition=" $(TargetFramework.StartsWith('tizen')) ">
 		<PackageReference Include="Tizen.NET" Version="8.0.0.15631"><PrivateAssets>All</PrivateAssets>
+		<PackageReference Include="Tizen.NET" Version="5.0.0.14562"><PrivateAssets>All</PrivateAssets>
 </PackageReference>
 		<Compile Include="**\*.tizen.cs" />
 		<Compile Include="**\*.tizen.*.cs" />
@@ -91,6 +100,8 @@
 		<PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
 		<PackageReference Include="Xamarin.Forms" Version="5.0.0.1874" />
 		<PackageReference Include="ZXing.Net" Version="0.16.6" />
+		<PackageReference Include="Xamarin.Essentials" Version="1.6.0" />
+		<PackageReference Include="Xamarin.Forms" Version="5.0.0.1874" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\ZXing.Net.Mobile\ZXing.Net.Mobile.csproj" />
