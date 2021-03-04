@@ -33,6 +33,7 @@
 		<DebugType>portable</DebugType>
 		<Configurations>Debug;Release</Configurations>
 		<IncludeProjectPriFile>false</IncludeProjectPriFile>
+		<ReleaseVersion></ReleaseVersion>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)'=='Debug' ">
 		<DebugSymbols>true</DebugSymbols>
@@ -96,7 +97,7 @@
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
-		<PackageReference Include="Xamarin.Forms" Version="5.0.0.1874" />
+		<PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\ZXing.Net.Mobile\ZXing.Net.Mobile.csproj" />
