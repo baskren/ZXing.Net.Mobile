@@ -27,6 +27,9 @@ namespace ZXing.Net.Mobile.Forms.iOS
 		{
 			AutoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight;
 
+			if (Element is null)
+				return;
+
 			formsView = Element;
 
 			if (zxingView == null)
